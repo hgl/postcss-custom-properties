@@ -118,3 +118,13 @@ test("circular variable references with fallback", function(t) {
   compareFixtures(t, "self-reference-double-fallback")
   t.end()
 })
+
+test("append variables", function(t) {
+  compareFixtures(t, "append", {
+    variables: {
+      "--test-one": "js-one",
+    },
+    append: true,
+  })
+  t.end()
+})
